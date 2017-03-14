@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="user" EntityType="Model.Store.user" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="artical" EntityType="Model.Store.artical" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="role" EntityType="Model.Store.role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="action" EntityType="Model.Store.action" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="articalType" EntityType="Model.Store.articalType" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userAlias" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userAvatarUrl" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userAccount" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userPwd" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userSelfDes" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userSex" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userBirth" Type="datetime" Nullable="false" />
+    <Property Name="userPhone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userEmail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userSite" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userPosition" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userCreateTime" Type="datetime" Nullable="false" />
+    <Property Name="useLoginStats" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userHomeDown" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userFuns" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userFocus" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="artical">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="artTitle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="artCreateTime" Type="datetime" Nullable="false" />
+    <Property Name="artContent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="roleName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="roleDes" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="action">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="actionName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="actionUrl" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="actionSort" Type="int" Nullable="true" />
+    <Property Name="actionCreateTime" Type="datetime" Nullable="true" />
+    <Property Name="actionImgUrl" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="actionParent" Type="int" Nullable="true" />
+    <Property Name="actionDes" Type="nvarchar" Nullable="true" MaxLength="512" />
+  </EntityType>
+  <EntityType Name="articalType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="artTypeName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="artTypeCount" Type="int" Nullable="false" />
+    <Property Name="artTypeShow" Type="bit" Nullable="true" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="user" EntityType="Model.user" />
+          <EntitySet Name="artical" EntityType="Model.artical" />
+          <EntitySet Name="role" EntityType="Model.role" />
+          <EntitySet Name="action" EntityType="Model.action" />
+          <EntitySet Name="articalType" EntityType="Model.articalType" />
+        </EntityContainer>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userAlias" Type="String" Nullable="false">
+            <Documentation>
+              <LongDescription>用户昵称</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="userAvatarUrl" Type="String" Nullable="false">
+            <Documentation>
+              <LongDescription>用户头像地址</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="userAccount" Type="String" Nullable="false">
+            <Documentation>
+              <LongDescription>用户账号</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="userPwd" Type="String" Nullable="false" />
+          <Property Name="userSelfDes" Type="String" Nullable="false">
+            <Documentation>
+              <LongDescription>用户自我描述</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="userSex" Type="String" Nullable="false" />
+          <Property Name="userBirth" Type="DateTime" Nullable="false">
+            <Documentation>
+              <LongDescription>用户出生时间</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="userPhone" Type="String" Nullable="false" />
+          <Property Name="userName" Type="String" Nullable="false" />
+          <Property Name="userEmail" Type="String" Nullable="false" />
+          <Property Name="userSite" Type="String" Nullable="false">
+            <Documentation>
+              <LongDescription>个人网址</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="userAddress" Type="String" Nullable="false">
+            <Documentation>
+              <LongDescription>用户现居住地</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="userPosition" Type="String" Nullable="false">
+            <Documentation>
+              <LongDescription>用户职位</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="userCreateTime" Type="DateTime" Nullable="false" >
+            <Documentation>
+              <LongDescription>用户创建时间</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="useLoginStats" Type="String" Nullable="false" />
+          <Property Name="userHomeDown" Type="String" Nullable="false">
+            <Documentation>
+              <LongDescription>家乡</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="userFuns" Type="String" Nullable="false" />
+          <Property Name="userFocus" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="artical">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="artTitle" Type="String" Nullable="false" />
+          <Property Name="artCreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="artContent" Type="String" Nullable="false" />
+          <Property Name="userName" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="roleName" Type="String" Nullable="false" />
+          <Property Name="roleDes" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="action">
+          <Documentation>
+            <LongDescription>权限(菜单)表</LongDescription>
+          </Documentation>
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="actionName" Type="String" Nullable="true" />
+          <Property Name="actionUrl" Type="String" Nullable="true" />
+          <Property Name="actionSort" Type="Int32" Nullable="true" />
+          <Property Name="actionCreateTime" Type="DateTime" Nullable="true" />
+          <Property Name="actionImgUrl" Type="String" Nullable="true" />
+          <Property Name="actionParent" Type="Int32" Nullable="true" />
+          <Property Name="actionDes" Type="String" Nullable="true" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="articalType">
+          <Documentation>
+            <LongDescription>文章分类</LongDescription>
+          </Documentation>
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="artTypeName" Type="String" Nullable="false" >
+            <Documentation>
+              <LongDescription>文章分类名</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="artTypeCount" Type="Int32" Nullable="false" >
+            <Documentation>
+              <LongDescription>此类文章数量</LongDescription>
+            </Documentation>
+          </Property>
+          <Property Name="artTypeShow" Type="Boolean" Nullable="true" >
+            <Documentation>
+              <LongDescription>是否显示此文章的类型在首页</LongDescription>
+            </Documentation>
+          </Property>
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ModelContainer">
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.user)">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userAlias" ColumnName="userAlias" />
+          <ScalarProperty Name="userAvatarUrl" ColumnName="userAvatarUrl" />
+          <ScalarProperty Name="userAccount" ColumnName="userAccount" />
+          <ScalarProperty Name="userPwd" ColumnName="userPwd" />
+          <ScalarProperty Name="userSelfDes" ColumnName="userSelfDes" />
+          <ScalarProperty Name="userSex" ColumnName="userSex" />
+          <ScalarProperty Name="userBirth" ColumnName="userBirth" />
+          <ScalarProperty Name="userPhone" ColumnName="userPhone" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userEmail" ColumnName="userEmail" />
+          <ScalarProperty Name="userSite" ColumnName="userSite" />
+          <ScalarProperty Name="userAddress" ColumnName="userAddress" />
+          <ScalarProperty Name="userPosition" ColumnName="userPosition" />
+          <ScalarProperty Name="userCreateTime" ColumnName="userCreateTime" />
+          <ScalarProperty Name="useLoginStats" ColumnName="useLoginStats" />
+          <ScalarProperty Name="userHomeDown" ColumnName="userHomeDown" />
+          <ScalarProperty Name="userFuns" ColumnName="userFuns" />
+          <ScalarProperty Name="userFocus" ColumnName="userFocus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artical">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.artical)">
+        <MappingFragment StoreEntitySet="artical">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="artTitle" ColumnName="artTitle" />
+          <ScalarProperty Name="artCreateTime" ColumnName="artCreateTime" />
+          <ScalarProperty Name="artContent" ColumnName="artContent" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="role">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.role)">
+        <MappingFragment StoreEntitySet="role">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="roleDes" ColumnName="roleDes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="action">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.action)">
+        <MappingFragment StoreEntitySet="action">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="actionName" ColumnName="actionName" />
+          <ScalarProperty Name="actionUrl" ColumnName="actionUrl" />
+          <ScalarProperty Name="actionSort" ColumnName="actionSort" />
+          <ScalarProperty Name="actionCreateTime" ColumnName="actionCreateTime" />
+          <ScalarProperty Name="actionImgUrl" ColumnName="actionImgUrl" />
+          <ScalarProperty Name="actionParent" ColumnName="actionParent" />
+          <ScalarProperty Name="actionDes" ColumnName="actionDes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="articalType">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.articalType)">
+        <MappingFragment StoreEntitySet="articalType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="artTypeName" ColumnName="artTypeName" />
+          <ScalarProperty Name="artTypeCount" ColumnName="artTypeCount" />
+          <ScalarProperty Name="artTypeShow" ColumnName="artTypeShow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
