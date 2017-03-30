@@ -23,7 +23,6 @@ namespace _17codes.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
