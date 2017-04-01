@@ -1,0 +1,20 @@
+{
+  "name": "17codes",
+  "version": "1.0.0",
+  "description": "致力打造一起码的网站",
+  "main": "entry.js",
+  "scripts": {
+    "test": "test command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lkdghzh/17codes.git"
+  },
+  "author": "like",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lkdghzh/17codes/issues"
+  },
+  "homepage": "https://github.com/lkdghzh/17codes#readme",
+  
+}
