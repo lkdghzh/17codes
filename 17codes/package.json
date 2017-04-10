@@ -4,7 +4,7 @@
   "description": "致力打造一起码的网站",
   "main": "entry.js",
   "scripts": {
-    "test": "test command"
+    "dev": "node build/dev-server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
     "url": "https://github.com/lkdghzh/17codes/issues"
   },
   "homepage": "https://github.com/lkdghzh/17codes#readme",
-  
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.15.2",
+    "webpack": "^2.3.3"
+  }
 }
