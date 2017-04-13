@@ -16,9 +16,16 @@
     "url": "https://github.com/lkdghzh/17codes/issues"
   },
   "homepage": "https://github.com/lkdghzh/17codes#readme",
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.2.6",
+    "vue-router": "^2.4.0",
+    "vuex": "^2.2.1"
+  },
   "devDependencies": {
     "express": "^4.15.2",
+    "rimraf": "^2.6.1",
+    "vue-loader": "^11.3.4",
+    "vue-template-compiler": "^2.2.6",
     "webpack": "^2.3.3"
   }
 }

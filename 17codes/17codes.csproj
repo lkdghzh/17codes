@@ -279,6 +279,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="static\src\css\" />
     <Folder Include="static\src\fonts\" />
+    <Folder Include="static\src\views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
