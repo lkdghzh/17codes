@@ -14,15 +14,14 @@ console.log(path.join(__dirname, '/static/dist/'))//d:\MyProject\17codes\17codes
 
 /*
 webpack-dev-middleware
-ÄÚ´æÖĞÉú³É´ò°üºÃµÄjsÎÄ¼ş£¬²»ÓÃÕæÕıĞ´µ½Ó²ÅÌÉÏ¡£
+å†…å­˜ä¸­ç”Ÿæˆæ‰“åŒ…å¥½çš„jsæ–‡ä»¶ï¼Œä¸ç”¨çœŸæ­£å†™åˆ°ç¡¬ç›˜ä¸Šã€‚
 */
 
 
 
 
 /*
-entry½Úµã¶ÔÏóµÄÊôĞÔÊÇ±ğÃû£¬ÊÇÓëoutputÖĞfilenameÊôĞÔ[name]¹ØÁªµÄ£¬Òò´ËÏëÒªÉú³ÉÊ²Ã´ÑùµÄÂ·¾¶£¬Ó¦¸ÃÔÚentryµÄÊôĞÔÖĞÅäÖÃ£¬ÈçÏÂ
-
+entryèŠ‚ç‚¹å¯¹è±¡çš„å±æ€§æ˜¯åˆ«åï¼Œæ˜¯ä¸outputä¸­filenameå±æ€§[name]å…³è”çš„ï¼Œå› æ­¤æƒ³è¦ç”Ÿæˆä»€ä¹ˆæ ·çš„è·¯å¾„ï¼Œåº”è¯¥åœ¨entryçš„å±æ€§ä¸­é…ç½®ï¼Œå¦‚ä¸‹
 entry: {
     index: './index.js',
     register: './register/register.js',
@@ -33,17 +32,17 @@ entry: {
 */
 /*
 ,
-    resolve: { extensions: ['.js', '.css'] },//ÓÃµ½µÄºó×ºÃûÈ«²¿²»´ø
+    resolve: { extensions: ['.js', '.css'] },//ç”¨åˆ°çš„åç¼€åå…¨éƒ¨ä¸å¸¦
 */
 module.exports = {
     entry: {
-        lib: ['vue', 'vue-router'],//ÏÈ¼ÓÔØlib£¨×Ô¼ºÃüÃû£©£¬Éú³É£¨°Ñvue£¬vuex´ò°ü³É£©lib.js¡£(Ã»ÓĞÒıÈëvue£¬µ«ÊÇ¾Í¿ÉÒÔÉú³Élib£¬webpack×Ô´øvueÂğ£¿£¿)
-        indexa: './static/src/js/index.js'//.js//ÓĞÂ·¾¶µÄÈë¿ÚÎÄ¼ş£¨¼ü×Ô¼ºÃüÃû£¬¶ÔÓ¦Êä³ö¡¾outputµÄÊä³ö[name]¡¿,//ºÍ±¾ÎÄ¼şµÄÍ¬¼¶Ä¿Â¼µÄÈë¿ÚÎÄ¼ş£¬´øÉÏ./£©
+        lib: ['vue', 'vue-router'],//å…ˆåŠ è½½libï¼ˆè‡ªå·±å‘½åï¼‰ï¼Œç”Ÿæˆï¼ˆæŠŠvueï¼Œvuexæ‰“åŒ…æˆï¼‰lib.jsã€‚(æ²¡æœ‰å¼•å…¥vueï¼Œä½†æ˜¯å°±å¯ä»¥ç”Ÿæˆlibï¼Œwebpackè‡ªå¸¦vueå—ï¼Ÿï¼Ÿ)
+        indexa: './static/index.js'//.js//æœ‰è·¯å¾„çš„å…¥å£æ–‡ä»¶ï¼ˆé”®è‡ªå·±å‘½åï¼Œå¯¹åº”è¾“å‡ºã€outputçš„è¾“å‡º[name]ã€‘,//å’Œæœ¬æ–‡ä»¶çš„åŒçº§ç›®å½•çš„å…¥å£æ–‡ä»¶ï¼Œå¸¦ä¸Š./ï¼‰
     },
     output: {
-        path: path.join(__dirname, '/static/dist/js/'),//´Ë´¦ĞèÒª¾ø¶ÔÂ·¾¶/ d:\MyProject\17codes\17codes\static\dist\ ²»ÊÇ/static/dist/£¨Õâ¸ö»áÔÚDÅÌ¸ùÄ¿Â¼Éú³É£©
+        path: path.join(__dirname, '/static/dist/js/'),//æ­¤å¤„éœ€è¦ç»å¯¹è·¯å¾„/ d:\MyProject\17codes\17codes\static\dist\ ä¸æ˜¯/static/dist/ï¼ˆè¿™ä¸ªä¼šåœ¨Dç›˜æ ¹ç›®å½•ç”Ÿæˆï¼‰
         filename: '[name].js'
-        //Éú³ÉÔÚentryÖĞÓĞÂ·¾¶¶ÔÓ¦µÄ¼üÃû
+        //ç”Ÿæˆåœ¨entryä¸­æœ‰è·¯å¾„å¯¹åº”çš„é”®å
         /*
         ERROR in chunk app [entry]
         index.js
