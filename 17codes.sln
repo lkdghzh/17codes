@@ -27,7 +27,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17codes.dao", "17codes.dao\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17codes.bll", "17codes.bll\17codes.bll.csproj", "{29D03654-5F90-404E-9BC5-D58D3F415344}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17codes.UI", "17codes.UI\17codes.UI.csproj", "{8D8AA929-4085-48E9-9BC4-EE0811E49EE5}"
+EndProject
 Global
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -57,6 +62,10 @@ Global
 		{29D03654-5F90-404E-9BC5-D58D3F415344}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29D03654-5F90-404E-9BC5-D58D3F415344}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29D03654-5F90-404E-9BC5-D58D3F415344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D8AA929-4085-48E9-9BC4-EE0811E49EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D8AA929-4085-48E9-9BC4-EE0811E49EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D8AA929-4085-48E9-9BC4-EE0811E49EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D8AA929-4085-48E9-9BC4-EE0811E49EE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,34 +76,5 @@ Global
 		{BFC1608A-58FA-4E2A-B650-9D832590F193} = {1071F117-E835-4667-92C8-18AB0744947B}
 		{9793A569-40C4-46B5-A784-8FEDB4FFD286} = {01AC6F85-0B87-421A-8434-12C45D0BE6DC}
 		{29D03654-5F90-404E-9BC5-D58D3F415344} = {A1602A26-87F8-446F-B172-B731F3402648}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://lkdvisualstudio.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = 17codes\\17codes.csproj
-		SccProjectName1 = 17codes
-		SccLocalPath1 = 17codes
-		SccProjectUniqueName2 = 17codes.model\\17codes.model.csproj
-		SccProjectTopLevelParentUniqueName2 = 17codes.sln
-		SccProjectName2 = 17codes.model
-		SccLocalPath2 = 17codes.model
-		SccProjectUniqueName3 = 17codes.idao\\17codes.idao.csproj
-		SccProjectTopLevelParentUniqueName3 = 17codes.sln
-		SccProjectName3 = 17codes.idao
-		SccLocalPath3 = 17codes.idao
-		SccProjectUniqueName4 = 17codes.ibll\\17codes.ibll.csproj
-		SccProjectTopLevelParentUniqueName4 = 17codes.sln
-		SccProjectName4 = 17codes.ibll
-		SccLocalPath4 = 17codes.ibll
-		SccProjectUniqueName5 = 17codes.dao\\17codes.dao.csproj
-		SccProjectTopLevelParentUniqueName5 = 17codes.sln
-		SccProjectName5 = 17codes.dao
-		SccLocalPath5 = 17codes.dao
-		SccProjectUniqueName6 = 17codes.bll\\17codes.bll.csproj
-		SccProjectTopLevelParentUniqueName6 = 17codes.sln
-		SccProjectName6 = 17codes.bll
-		SccLocalPath6 = 17codes.bll
 	EndGlobalSection
 EndGlobal
