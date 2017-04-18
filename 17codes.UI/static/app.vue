@@ -3,7 +3,7 @@
 	     class="container-fluid">
 		<div class="row">
 			<div class="pull-left logo">
-				17Code
+				17Codessss.......5566777778888999
 			</div>
 			<div class="pull-right">
 				<span>管理员</span>

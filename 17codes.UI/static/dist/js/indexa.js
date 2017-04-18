@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/static/dist/js/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 11);
@@ -10512,7 +10512,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "row"
   }, [_c('div', {
     staticClass: "pull-left logo"
-  }, [_vm._v("\n\t\t\t17Code\n\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\n\t\t\t17Codessss.......5566\n\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "pull-right"
   }, [_c('span', [_vm._v("管理员")]), _vm._v(" "), _c('a', {
     attrs: {
@@ -10542,7 +10542,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_vue__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__app_vue__);
 //document.body.innerHTML = "111122233344455667893333331191"
-console.log('11');
+
+
 
 
 

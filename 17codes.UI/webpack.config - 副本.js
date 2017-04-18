@@ -41,7 +41,6 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, '/static/dist/js/'),//此处需要绝对路径/ d:\MyProject\17codes\17codes\static\dist\ 不是/static/dist/（这个会在D盘根目录生成）
-        publicPath:'/static/dist/js/',
         filename: '[name].js'
         //生成在entry中有路径对应的键名
         /*
@@ -52,18 +51,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.vue/, loader: 'vue-loader' },
-            { test: /\.css$/, loader: 'style-loader!css-loader' },
+            { test: /\.vue/, loader: 'vue-loader' }
         ]
-     }
-    //  ,
-    // devServer: {
-    //     contentBase: './', //本地服务器所加载的页面所在的目录
-    //     host: 'localhost', //本地IP地址
-    //     colors: true, //终端输出结果为彩色
-    //     historyApiFallback: true, //不跳转
-    //     inline: true, //实时刷新
-    //     port: '3333' //端口号
- 
-    // }
+    }
 }
