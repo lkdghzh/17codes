@@ -5,7 +5,7 @@
   "main": "entry.js",
   "scripts": {
     "build": "webpack --progress --color --config webpack.config.js",
-    "dev": "webpack-dev-server --port 8004 --hot --inline"
+    "start": "webpack-dev-server --port 8004 --hot --inline"
   },
   "repository": {
     "type": "git",
@@ -18,13 +18,21 @@
   },
   "homepage": "https://github.com/lkdghzh/17codes#readme",
   "dependencies": {
+    "muse-ui": "^2.0.2",
     "vue": "^2.2.6",
     "vue-router": "^2.4.0",
     "vuex": "^2.2.1"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "css-loader": "^0.28.0",
     "express": "^4.15.2",
+    "file-loader": "^0.11.1",
+    "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
     "vue-loader": "^11.3.4",
     "vue-template-compiler": "^2.2.6",
     "webpack": "^2.3.3",
