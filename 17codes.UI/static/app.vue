@@ -1,77 +1,109 @@
 ﻿<style scope>
 .root-page{
 	height: 100%;
+	font-family: Lato,"PingFang SC","Microsoft YaHei",sans-serif;
 }
-.nav-bar {
-	min-height: 50px;
-	height: 5.5%;
-	background-color:#C9CABB;
+.bar {
+	height: 3px;
+	background-color:#34352C;
+	/*width: 100%;
+	position: fixed;
+	top:0px;*/
 }
-/*color0: #F5F6EB__RGB(245,246,235)
-color1: #EFF0DC__RGB(239,240,220)
-color2: #C9CABB__RGB(201,202,187)
-color3: #34352C__RGB(52,53,44)*/
-.nav-container {
-	margin: 0px auto;
-	height: 100%;
-	width: 980px;
-	border-radius: 5px;
-	background:#F5F6EB;
-}
-.aside-menu{
-	height:94.5%;
-	width: 20%;
-	background:#34352C;
-	float: left;
-}
-.article-body{
-	height:94.5%;
-	width: 80%;
+.section-body{
+	height:100%;
 	background:#EFF0DC;
-	float: right;
+}
+.sidebar{
+	height:100%;
+	width:320px;
+	background:#34352C;
+	position: fixed;
+	top:0px;
+	right: 0px;
+	/*right:-320px;*/
+
+	text-align: center;
+}
+.sidebar .author-img{
+	width:110px;
+	height:110px;
+	border-radius: 55px;
+	margin:0px auto;
+	background-image: url("http://images.cnblogs.com/cnblogs_com/leee/801892/o_like.png");
+	background-size: cover;
+	cursor: pointer;
+}
+.sidebar .menu{
+	margin: 70px auto;
+	width: 300px;
+}
+.sidebar .menu ul{
+	list-style-type: none;
+	overflow: hidden;
+}
+.sidebar .menu ul li{
+	float: left;
+	border-bottom: 1px solid silver;
+	color: #fff;
+	margin-left:10px;
+	cursor: pointer;
+}
+.sidebar .contentTable{
+	margin: 70px auto;
+	width: 300px;
+	color: white;
+}
+.overview .author-name{
+	margin: 15px auto;
+	color: #f5f5f5;
 }
 </style>
-
 <template>
 	<div class="root-page" >
-		<nav class="nav-bar">
-			<div class="nav-container">
-				<div class="nav-header">
-					<a class="nav-brand" href="#">17Codes</a>
-					<!--<ul class="nav navbar-nav">
-						<li>
-							<form class="navbar-form ">
-								<div class="input-group">
-									<input type="text" placeholder="文章搜索" class="form-control" />
-									<span class="input-group-btn">
-										<button class="btn btn-default" type="button">
-											Go!
-										</button>
-									</span>
-								</div>
-							</form>
-						</li>
-					</ul>-->
+		<div class="bar"></div>
+		<aside class="sidebar">
+			<div class="menu">
+				<ul >
+					<li @click="toogleMark(0)">Table Of Contents</li>
+					<li @click="toogleMark(1)">Overview</li>
+				</ul>
+			</div>
+			<div class="contentTable" v-if="markIndex === 0">
+				<div class="category">
+					<ul >
+						<li @click="switchCategory(0)">Javascript</li>
+						<li @click="switchCategory(1)">c#</li>
+					</ul>
 				</div>
 			</div>
-		</nav>
-		<aside class="aside-menu">
-			ul>li*5
+			<div class="overview" v-if="markIndex === 1">
+				<div class="author-img"></div>
+				<p class="author-name">李&nbsp;可</p>
+			</div>
 		</aside>
-		<article class="article-body"></article>
+		<section class="section-body">
+		</section>
 	</div>
 </template>
-
 <script>
 import './src/css/bootstrap.min.css'
 import './src/css/common.css'
 
 export default {
 	data: function () {
-		return {}
+		return {
+			markIndex:1,
+		}
 	},
-	methods: [
+	methods:{
+		toogleMark(markInx){
+			this.markIndex=markInx;
+		},
+		switchCategory(categoryInx){
+			!categoryInx?alert('c1'):alert('c2');
+		}
+	}
 
-	]
 }
 </script>
