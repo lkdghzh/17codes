@@ -7,12 +7,12 @@ import routerConfigs from './src/router/index.js';
 import storeConfigs from './src/store/index.js';
 
 import App from './app.vue';
-// import MuseUI from 'muse-ui'
-// import 'muse-ui/dist/muse-ui.css'
-// import carbon from '!raw!muse-ui/dist/theme-carbon.css'
+
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
 
 let initApp = ()=>{
-  //Vue.use( MuseUI);
+  Vue.use( ElementUI);
   Vue.use( Vuex);
   Vue.use( VueRouter);
   let router=new VueRouter({routes:routerConfigs});

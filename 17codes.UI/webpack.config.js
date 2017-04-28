@@ -21,16 +21,38 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.vue/, loader: 'vue-loader' },
-            { test: /\.css$/, loader: 'style-loader!css-loader' },//css-loader  如果确定样式表中没有url（）路径和字体，可以用raw-loader
-            { test: /\.(woff2?|eot|ttf|otf|woff|svg)(\?.*)?$/, loader: 'url-loader' },//?limit=50000&name=[path][name].[ext]
-            //{ test: /\.(png|jpg|gif)$/, loader: 'file-loader?name=[name].[hash].[ext]' },
-            { test: /\.js/, loader: 'babel-loader' },
+            {
+                test: /\.vue/,
+                loader: 'vue-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },//css-loader  如果确定样式表中没有url（）路径和字体，可以用raw-loader
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+                loader: 'file-loader'
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
+                loader: 'file-loader',
+                query: {
+                    name: '[name].[ext]?[hash]'
+                }
+            },
+            {
+                test: /\.js/,
+                loader: 'babel-loader'
+            },
 
         ]
     },
     resolve: { extensions: ['.js', '.css'] },//用到的后缀名全部不带
     plugins: [
         //new extractTextPlugin('')
-    ]
+    ],
+    devServer: {//http://localhost:8086/static/#/index.html
+        historyApiFallback: true,
+        noInfo: true
+    },
 }

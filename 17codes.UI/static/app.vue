@@ -49,6 +49,9 @@
 	margin-left:10px;
 	cursor: pointer;
 }
+.activea{
+	border-bottom-color: red !important;
+}
 .sidebar .contentTable{
 	margin: 70px auto;
 	width: 300px;
@@ -65,19 +68,21 @@
 		<aside class="sidebar">
 			<div class="menu">
 				<ul >
-					<li @click="toogleMark(0)">Table Of Contents</li>
-					<li @click="toogleMark(1)">Overview</li>
+					<li @click="toogleMark(1)" :class="{activea:markIndex===1}">Table Of Contents</li>
+					<li @click="toogleMark(2)" :class="{activea:markIndex===2}">Overview</li>
 				</ul>
 			</div>
-			<div class="contentTable" v-if="markIndex === 0">
+			<div class="contentTable" v-if="markIndex === 1">
 				<div class="category">
 					<ul >
-						<li @click="switchCategory(0)">Javascript</li>
-						<li @click="switchCategory(1)">c#</li>
+						<li @click="switchCategory(1)">Javascript</li>
+						<li @click="switchCategory(2)">Sqlserver</li>
+						<li @click="switchCategory(3)">.Net</li>
+						<li @click="switchCategory(4)">Python</li>
 					</ul>
 				</div>
 			</div>
-			<div class="overview" v-if="markIndex === 1">
+			<div class="overview" v-if="markIndex === 2">
 				<div class="author-img"></div>
 				<p class="author-name">李&nbsp;可</p>
 			</div>
@@ -101,7 +106,7 @@ export default {
 			this.markIndex=markInx;
 		},
 		switchCategory(categoryInx){
-			!categoryInx?alert('c1'):alert('c2');
+			alert(categoryInx);
 		}
 	}
 
