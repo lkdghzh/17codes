@@ -202,6 +202,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -215,7 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="build\dev-server.js" />
+    <Content Include="HtmlPage1sss.html" />
     <Content Include="static\src\js\index.js" />
+    <Content Include="Views\Home\a.html" />
     <Content Include="webpack.config.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -280,6 +283,7 @@
     <Folder Include="static\src\css\" />
     <Folder Include="static\src\fonts\" />
     <Folder Include="static\src\views\" />
+    <Folder Include="Views\Article\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

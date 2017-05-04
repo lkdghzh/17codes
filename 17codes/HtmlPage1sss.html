@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <!--<script src="Scripts/jquery-1.10.2.intellisense.js"></script>-->
+    <script>
+        $.ajax({
+            url: 'Article/GetArticles'
+        })
+                .done(function (arr) {
+                    debugger;
+                    alert(arr)
+                })
+                .fail(function (err) {
+                    debugger;
+                    alert(err)
+                })
+    </script>
+</head>
+<body>
+    sssssssssss
+</body>
+</html>
